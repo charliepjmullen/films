@@ -7,7 +7,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id = "banner">
+        <%= image_tag("sadFace.jpg", :size => "100x50")%>
+		<%= "Movies We Love" %>
+</div>
 
+<div id = "nav">
+     <ul>
+        <li><%=link_to "Home", root_path %></li>
+		<li><%=link_to "Movie News", 'http://oscar.go.com/nominees'%></li>
+		<li><%=mail_to "mary.reagan@mydit.ie", "Contact us"%></li>
+		<li><%=link_to "Movies", movies_path%></li>
+     </ul>
+</div>
 <%= yield %>
 
 </body>
