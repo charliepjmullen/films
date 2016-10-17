@@ -1,7 +1,22 @@
 Rails.application.routes.draw do
-  get 'pages/home'
+  controller :sessions do
+    get 'login' =>:new
+	post 'login' =>:create
+	get 'logout' =>:destroy
+	delete 'logout'=>:destroy
+  end
+  
+  #get 'sessions/new'
 
-  get 'pages/about'
+  #get 'sessions/create'
+
+  #get 'sessions/destroy'
+
+  resources :users
+
+  #get 'pages/home'
+
+  #get 'pages/about'
 
   resources :genres
 
